@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    li {
+        @apply px-4;
+        @apply cursor-pointer;
+        @apply md:hover:scale-125;
+    }
+    .active{
+        @apply scale-150;
+        @apply mb-4;
+    }
+    .btn {
+        @apply border-2 rounded-full text-gray-300 hover:border-pink-600 ;
+    }
+    .btn-sm {
+        @apply h-[48px] px-6 text-sm;
+    }
+    .btn-lg {
+        @apply h-[56px] px-10 text-base;
+    }
+    .btn-link {
+        @apply text-base;
+    }
+    .section {
+        @apply py-8 lg:py-24 lg:h-screen flex items-center;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-work {
+    background: url('assets/projects/workImg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.bg-realEstate {
+    background: url('assets/projects/realestate.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.content-div:hover{
+    background-image: linear-gradient(
+        to right,
+        rgba(112, 157, 255, 0.8),
+        hsla(247, 47%, 61%, 0.8)
+    );
 }
